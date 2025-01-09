@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.*;
 public class TestVWOLogin_POM {
 
 
-    @Owner("VIVEK")
+    @Owner("VIVEK KUMAR")
     @Description("Verify that invalid creds give error message")
     @Test
     public void testLoginNegativeVWO() {
