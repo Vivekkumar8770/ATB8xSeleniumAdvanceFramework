@@ -13,3 +13,4 @@
 - Run Local and on Selenoid Integration
 
 
+<img width="1024" alt="Framework 1" src="https://github.com/user-attachments/assets/41bc1bb7-d128-495e-8621-51e685994a76" />
