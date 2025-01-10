@@ -1,9 +1,11 @@
-package com.thetestingacademy.pages.pageObjectModel;
+package com.thetestingacademy.pages.pageObjectModel.vwo;
 
+import com.thetestingacademy.base.CommonToAllPage;
+import com.thetestingacademy.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage_POM {
+public class LoginPage_POM extends CommonToAllPage {
 
     WebDriver driver;
 
@@ -12,7 +14,7 @@ public class LoginPage_POM {
     }
 
 
-    // Page Locators
+    // Step 1 - Page Locators
     private By username = By.id("login-username");
     private By password = By.id("login-password");
     private By signButton = By.id("js-login-btn");
@@ -21,13 +23,14 @@ public class LoginPage_POM {
     // If you are not using it , don't keep.
 
 
-    // Page Actions
+    // Step 2 - Page Actions
 
     public String loginToVWOLoginInvalidCreds(String user, String pwd) {
 
-        driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pwd);
-        driver.findElement(signButton).click();
+        driver.get(PropertiesReader.readKey("url"));
+        enterInput(username, user);
+        enterInput(password, pwd);
+        clickElement(signButton);
 
         try {
             Thread.sleep(3000);
@@ -40,9 +43,17 @@ public class LoginPage_POM {
     }
 
     public void loginToVWOLoginValidCreds(String user, String pwd) {
-        driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pwd);
-        driver.findElement(signButton).click();
+
+        driver.get(PropertiesReader.readKey("url"));
+        enterInput(username, user);
+        enterInput(password, pwd);
+        clickElement(signButton);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }
