@@ -8,6 +8,7 @@ import java.util.Properties;
 public class PropertiesReader {
 
 
+    //In this readkey function will read the data from the data.properties
     public static String readKey(String key)  {
         try {
             FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/data.properties");

@@ -1,4 +1,4 @@
-package com.thetestingacademy.tests.vwoLogin;
+package com.thetestingacademy.tests.vwoLogin.pageObjectModel_TestCase;
 
 import com.thetestingacademy.base.CommonToAllTest;
 import com.thetestingacademy.driver.DriverManager;
@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
+//when you run the class "TestVWOLogin_POM" than first CommonToAllTest will run first
 public class TestVWOLogin_POM extends CommonToAllTest {
 
 
